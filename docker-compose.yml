@@ -1,0 +1,13 @@
+version: "3"
+services:
+  api:
+    container_name: api-container
+    restart: always
+    image: node:14.15
+    working_dir: /usr/src/enem-api
+    command: bash -c "yarn --production && yarn add nodemon -D && yarn debug"
+    volumes:
+      - ./dist/:/usr/src/enem-api/dist/
+      - ./package.json:/usr/src/enem-api/package.json
+    ports:
+      - "5000:5000"

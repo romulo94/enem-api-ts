@@ -1,0 +1,7 @@
+{
+  "lang": "en-US",
+  "min-len": 10,
+  "max-len": 255,
+  "showInvalidHeader": false,
+  "debug": false
+}
